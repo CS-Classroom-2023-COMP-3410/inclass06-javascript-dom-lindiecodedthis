@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>memory matching game</h1>
+
+  <div class="info">
+    <p>moves: <span id="moves">0</span></p>
+    <p>time: <span id="time">0</span>s</p>
+    <button id="restart" class="button">restart</button>
+  </div>
+
+  <div id="board" class="board"></div>
+
+  <!-- Win overlay -->
+<div id="overlay" class="overlay hidden">
+    <div id="winBox" class="win-box">
+      <h2>you win!</h2>
+      <p>☆.｡˖✧◝(⁰▿⁰)◜✧˖｡.☆</p>
+      <p>
+        moves: <span id="winMoves">0</span> |
+        time: <span id="winTime">0</span>s
+      </p>
+      <button id="playAgain">play again</button>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
