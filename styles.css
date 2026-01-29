@@ -1,0 +1,100 @@
+body {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  .board {
+    width: 500px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .card {
+    height: 90px;
+    width: 150px;
+    background: #90d4ff;
+    color: rgb(254, 214, 255);
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 12px;
+  }
+
+   .button  {
+    height: 50px;
+    width: 100px;
+    background: #fdb4f9;
+    color: rgb(0, 0, 0);
+    /*border-color: #fdb4f9;*/
+    border-style: unset;
+    border-radius: 12px;
+
+   }
+
+   .win-box {
+    animation: pop 0.2s ease-out;
+    width: 320px;
+    margin: 20px auto;
+    padding: 16px;
+    background: rgb(255, 220, 203);
+    border-color:rgb(251, 175, 137);
+    border-width: 3px;
+    border-style: dotted;
+    border-radius: 12px;
+  }
+
+  @keyframes pop {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .win-box button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color:rgb(0, 0, 0);
+    background:rgb(210, 250, 199);
+    border-color: rgb(126, 187, 143);
+    border-radius: 12px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(228, 237, 240, 0.5); /* greys out background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  
+  .card.flipped,
+  .card.matched {
+    background: #ffccf7;
+    color: #000000;
+    cursor: default;
+  }
+  
